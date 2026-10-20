@@ -24,9 +24,9 @@ html_content = f'''<!DOCTYPE html>
     :root {{
       --text-brown: #3f1f25;
       --text-muted: #78484f;
-      --card-bg: rgba(255, 255, 255, 0.96);
+      --card-bg: rgba(255, 255, 255, 0.94);
       --card-border: rgba(255, 255, 255, 0.95);
-      --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 0 25px rgba(255, 255, 255, 0.9), 0 25px 60px -10px rgba(180, 80, 100, 0.18);
+      --card-shadow: 0 25px 60px -12px rgba(190, 75, 100, 0.16), 0 10px 28px -6px rgba(0, 0, 0, 0.05), 0 0 30px rgba(255, 255, 255, 0.9);
     }}
 
     * {{
@@ -45,15 +45,14 @@ html_content = f'''<!DOCTYPE html>
     body {{
       font-family: 'Be Vietnam Pro', sans-serif;
       color: var(--text-brown);
-      /* Gradient trong trẻo: Bầu trời xanh sớm mai -> Hồng ngọc trai nhẹ -> Cỏ xanh mờ sương */
+      /* Nền gradient chuyển sắc nhẹ nhàng, thanh lịch và trong trẻo: Tone hồng pastel phớt trắng & xanh da trời dịu nhẹ */
       background: linear-gradient(
-        180deg,
-        #eaf4fc 0%,
-        #e0f2fe 18%,
-        #fff5f7 42%,
-        #fff0f5 65%,
-        #edf7ee 86%,
-        #e8f5e9 100%
+        160deg,
+        #eef6fc 0%,
+        #e5f1fb 22%,
+        #fdf8fa 48%,
+        #fcf0f4 75%,
+        #fbe9ef 100%
       );
       position: relative;
       user-select: none;
@@ -68,8 +67,8 @@ html_content = f'''<!DOCTYPE html>
       height: 100vh;
       pointer-events: none;
       z-index: 1;
-      background: radial-gradient(ellipse at 85% 8%, rgba(255, 253, 238, 0.6) 0%, transparent 55%),
-                  radial-gradient(circle at 50% 35%, transparent 60%, rgba(215, 235, 248, 0.22) 90%, rgba(195, 222, 238, 0.35) 100%);
+      background: radial-gradient(ellipse at 85% 10%, rgba(255, 253, 240, 0.7) 0%, transparent 55%),
+                  radial-gradient(circle at 50% 45%, transparent 60%, rgba(220, 238, 250, 0.25) 90%, rgba(248, 225, 235, 0.3) 100%);
     }}
 
     /* Background Ambient Canvas (Sparkles & Falling Petals) */
@@ -95,35 +94,35 @@ html_content = f'''<!DOCTYPE html>
     }}
 
     .leak-1 {{
-      top: -8%;
-      left: 8%;
-      width: 450px;
-      height: 450px;
-      background: radial-gradient(circle, rgba(254, 249, 230, 0.75) 0%, rgba(224, 242, 254, 0) 70%);
+      top: -10%;
+      left: 10%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(254, 250, 236, 0.8) 0%, rgba(224, 242, 254, 0) 70%);
     }}
 
     .leak-2 {{
       bottom: -10%;
-      left: 15%;
-      width: 520px;
-      height: 520px;
-      background: radial-gradient(circle, rgba(200, 240, 215, 0.45) 0%, rgba(232, 245, 233, 0) 70%);
-      animation-delay: -7s;
+      right: 15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(253, 226, 236, 0.55) 0%, rgba(255, 255, 255, 0) 70%);
+      animation-delay: -6s;
     }}
 
     .leak-3 {{
-      top: 35%;
-      right: 15%;
-      width: 380px;
-      height: 380px;
-      background: radial-gradient(circle, rgba(254, 226, 235, 0.45) 0%, rgba(255, 255, 255, 0) 70%);
+      top: 40%;
+      left: 20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(224, 242, 254, 0.45) 0%, rgba(255, 255, 255, 0) 70%);
       animation-delay: -12s;
     }}
 
     @keyframes floatAura {{
       0% {{ transform: translate(0, 0) scale(1); }}
-      50% {{ transform: translate(28px, -24px) scale(1.1); }}
-      100% {{ transform: translate(-24px, 18px) scale(0.95); }}
+      50% {{ transform: translate(25px, -20px) scale(1.08); }}
+      100% {{ transform: translate(-20px, 16px) scale(0.96); }}
     }}
 
     /* Header Bar */
@@ -147,19 +146,19 @@ html_content = f'''<!DOCTYPE html>
       letter-spacing: 0.08em;
       color: rgba(94, 46, 52, 0.88);
       font-weight: 600;
-      background: rgba(255, 255, 255, 0.65);
+      background: rgba(255, 255, 255, 0.68);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       padding: 6px 16px;
       border-radius: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.88);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
       pointer-events: auto;
       transition: all 0.3s ease;
     }}
 
     .brand-tag:hover {{
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       transform: translateY(-1px);
     }}
 
@@ -232,7 +231,7 @@ html_content = f'''<!DOCTYPE html>
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+      transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1), 
                   opacity 1s cubic-bezier(0.22, 1, 0.36, 1);
     }}
 
@@ -245,17 +244,17 @@ html_content = f'''<!DOCTYPE html>
 
     #screen1.hide {{
       opacity: 0;
-      transform: translateY(-80px) scale(0.96);
+      transform: translateY(-70px) scale(0.96);
       pointer-events: none;
     }}
 
     #screen2 {{
       opacity: 0;
-      transform: translateY(40px);
+      transform: translateY(30px) scale(0.98);
       pointer-events: none;
       visibility: hidden;
       z-index: 10;
-      padding: 20px 16px;
+      padding: 60px 16px 24px;
       transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1), 
                   opacity 1.0s cubic-bezier(0.16, 1, 0.3, 1),
                   visibility 0s 1.1s;
@@ -263,7 +262,7 @@ html_content = f'''<!DOCTYPE html>
 
     #screen2.show {{
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
       pointer-events: auto;
       visibility: visible;
       transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1), 
@@ -429,146 +428,16 @@ html_content = f'''<!DOCTYPE html>
     }}
 
     /* =====================================================================
-       VƯỜN HOA TULIP NỀN: NẰM HOÀN TOÀN Ở LỚP NỀN PHÍA SAU (z-index: 2)
-       Chiếm 45% - 50% màn hình, đan xen khít nhau lấp ló 2 bên và dưới chân thiệp
-       ===================================================================== */
-    .tulip-garden-container {{
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100vw;
-      height: 48vh;
-      min-height: 360px;
-      max-height: 500px;
-      pointer-events: none;
-      z-index: 2;
-      overflow: visible;
-      opacity: 0;
-      transform: translateY(60px);
-      transition: opacity 1.2s ease, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }}
-
-    #screen2.show ~ .tulip-garden-container,
-    .tulip-garden-container.visible {{
-      opacity: 1;
-      transform: translateY(0);
-    }}
-
-    /* Thảm sương cỏ nền */
-    .garden-ground-mist {{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 35%;
-      background: linear-gradient(to top, rgba(232, 245, 233, 0.92) 0%, rgba(237, 247, 238, 0.5) 50%, transparent 100%);
-      z-index: 1;
-      pointer-events: none;
-    }}
-
-    .tulip-layer {{
-      position: absolute;
-      bottom: -15px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }}
-
-    .tulip-layer.deep-back {{
-      z-index: 2;
-      opacity: 0.78;
-      filter: blur(1.2px) brightness(0.95);
-      bottom: -30px;
-    }}
-
-    .tulip-layer.back {{
-      z-index: 3;
-      opacity: 0.88;
-      filter: blur(0.7px) brightness(0.98);
-      bottom: -20px;
-    }}
-
-    .tulip-layer.mid {{
-      z-index: 4;
-      opacity: 0.96;
-      filter: drop-shadow(0 8px 16px rgba(50, 100, 70, 0.12));
-      bottom: -10px;
-    }}
-
-    .tulip-layer.front {{
-      z-index: 5;
-      opacity: 1;
-      filter: drop-shadow(0 14px 24px rgba(40, 80, 60, 0.18));
-      bottom: -5px;
-    }}
-
-    .tulip-stem {{
-      position: absolute;
-      bottom: 0;
-      transform-origin: bottom center;
-      transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), 
-                  filter 0.8s ease;
-      will-change: transform;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    }}
-
-    .tulip-flora-img {{
-      height: 100%;
-      width: auto;
-      display: block;
-      user-select: none;
-      -webkit-user-drag: none;
-      object-fit: contain;
-    }}
-
-    .sway-left {{
-      animation: tulipSwayLeft 5.5s ease-in-out infinite alternate;
-    }}
-    .sway-right {{
-      animation: tulipSwayRight 4.8s ease-in-out infinite alternate;
-    }}
-    .sway-soft {{
-      animation: tulipSwaySoft 6.4s ease-in-out infinite alternate;
-    }}
-
-    @keyframes tulipSwayLeft {{
-      0% {{ transform: rotate(0deg); }}
-      50% {{ transform: rotate(-3deg) translateY(-2px); }}
-      100% {{ transform: rotate(2.4deg); }}
-    }}
-
-    @keyframes tulipSwayRight {{
-      0% {{ transform: rotate(-2deg); }}
-      50% {{ transform: rotate(3.4deg) translateY(-3px); }}
-      100% {{ transform: rotate(0deg); }}
-    }}
-
-    @keyframes tulipSwaySoft {{
-      0% {{ transform: rotate(1.4deg); }}
-      50% {{ transform: rotate(-2.2deg) translateY(-1px); }}
-      100% {{ transform: rotate(2.6deg); }}
-    }}
-
-    .tulip-garden-container.boosted .tulip-stem {{
-      transform: translateY(-35px) scale(1.1);
-      filter: drop-shadow(0 0 20px rgba(244, 114, 182, 0.65)) brightness(1.1);
-    }}
-
-    /* =====================================================================
-       SCREEN 2: TẤM THIỆP YÊU THƯƠNG (NẰM ĐÈ LÊN TRÊN VƯỜN HOA - z-index: 20)
-       Căn giữa màn hình tự nhiên, thanh lịch, nổi bật trên nền hoa phía sau
+       SCREEN 2: TẤM THIỆP YÊU THƯƠNG (CĂN CHÍNH GIỮA MÀN HÌNH - CENTERED)
+       Tối giản, thanh lịch, sang trọng, bo tròn góc, đổ bóng mềm mại
        ===================================================================== */
     .card-container {{
       width: 100%;
       max-width: 500px;
-      max-height: calc(100vh - 65px);
       position: relative;
       margin: auto;
       perspective: 1200px;
-      z-index: 20; /* TẤM THIỆP NẰM ĐÈ LÊN TRÊN VƯỜN HOA */
+      z-index: 20;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -576,20 +445,19 @@ html_content = f'''<!DOCTYPE html>
 
     .love-card {{
       width: 100%;
-      max-height: calc(100vh - 65px);
       background: var(--card-bg);
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
       border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: clamp(16px, 2.5vh, 26px) clamp(18px, 4vw, 32px);
+      border-radius: 28px;
+      padding: clamp(18px, 2.8vh, 28px) clamp(20px, 4.5vw, 34px);
       box-shadow: var(--card-shadow);
       position: relative;
       text-align: center;
       overflow: hidden;
       box-sizing: border-box;
       transform-style: preserve-3d;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -597,9 +465,10 @@ html_content = f'''<!DOCTYPE html>
     }}
 
     .love-card:hover {{
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16), 
-                  0 0 35px rgba(255, 255, 255, 0.95), 
-                  0 30px 70px -10px rgba(180, 80, 100, 0.22);
+      transform: translateY(-2px);
+      box-shadow: 0 30px 70px -12px rgba(190, 75, 100, 0.22), 
+                  0 12px 35px -6px rgba(0, 0, 0, 0.06), 
+                  0 0 35px rgba(255, 255, 255, 0.95);
     }}
 
     .love-card::before {{
@@ -609,8 +478,8 @@ html_content = f'''<!DOCTYPE html>
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(circle at 85% 15%, rgba(254, 215, 226, 0.25) 0%, transparent 60%),
-                  radial-gradient(circle at 15% 85%, rgba(240, 253, 244, 0.3) 0%, transparent 60%);
+      background: radial-gradient(circle at 85% 15%, rgba(254, 215, 226, 0.3) 0%, transparent 60%),
+                  radial-gradient(circle at 15% 85%, rgba(224, 242, 254, 0.3) 0%, transparent 60%);
       pointer-events: none;
       z-index: 0;
     }}
@@ -621,8 +490,8 @@ html_content = f'''<!DOCTYPE html>
       left: 10px;
       right: 10px;
       bottom: 10px;
-      border: 1px solid rgba(220, 175, 185, 0.35);
-      border-radius: 18px;
+      border: 1px solid rgba(225, 165, 180, 0.32);
+      border-radius: 20px;
       pointer-events: none;
       z-index: 1;
     }}
@@ -633,30 +502,30 @@ html_content = f'''<!DOCTYPE html>
     }}
 
     .card-header-icon {{
-      width: 38px;
-      height: 38px;
-      margin: 0 auto 5px;
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 6px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(254, 226, 226, 0.75);
+      background: rgba(254, 226, 226, 0.8);
       border-radius: 50%;
-      border: 1px solid rgba(252, 165, 165, 0.5);
-      box-shadow: 0 4px 12px rgba(225, 29, 72, 0.1);
+      border: 1px solid rgba(252, 165, 165, 0.55);
+      box-shadow: 0 4px 14px rgba(225, 29, 72, 0.12);
       animation: floatAura 6s ease-in-out infinite alternate;
       overflow: hidden;
     }}
 
     .card-header-icon img {{
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       object-fit: contain;
     }}
 
     .card-salutation {{
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-size: 1.15rem;
+      font-size: 1.16rem;
       color: #8c3b47;
       margin-bottom: 3px;
       letter-spacing: 0.04em;
@@ -664,11 +533,11 @@ html_content = f'''<!DOCTYPE html>
 
     .card-title {{
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.25rem, 2.7vw, 1.5rem);
+      font-size: clamp(1.28rem, 2.7vw, 1.55rem);
       font-weight: 700;
       color: #381b20;
       line-height: 1.25;
-      margin-bottom: 9px;
+      margin-bottom: 8px;
       letter-spacing: -0.01em;
     }}
 
@@ -677,19 +546,19 @@ html_content = f'''<!DOCTYPE html>
       align-items: center;
       justify-content: center;
       gap: 10px;
-      margin: 7px 0 9px;
+      margin: 6px 0 9px;
       color: #e5989b;
     }}
 
     .card-divider span {{
-      width: 36px;
+      width: 38px;
       height: 1px;
       background: linear-gradient(90deg, transparent, #d98880, transparent);
     }}
 
     .card-poem {{
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(0.95rem, 1.85vw, 1.1rem);
+      font-size: clamp(0.96rem, 1.85vw, 1.12rem);
       line-height: 1.45;
       color: #55272e;
       text-align: center;
@@ -709,8 +578,8 @@ html_content = f'''<!DOCTYPE html>
 
     .card-wish {{
       font-family: 'Be Vietnam Pro', sans-serif;
-      font-size: clamp(0.81rem, 1.48vw, 0.9rem);
-      line-height: 1.48;
+      font-size: clamp(0.82rem, 1.48vw, 0.91rem);
+      line-height: 1.5;
       color: #633e44;
       font-weight: 300;
       margin-bottom: 7px;
@@ -725,11 +594,11 @@ html_content = f'''<!DOCTYPE html>
     .card-closing {{
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-size: 1.16rem;
+      font-size: 1.18rem;
       color: #9f1239;
       font-weight: 600;
-      margin-top: 3px;
-      margin-bottom: 11px;
+      margin-top: 4px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -754,7 +623,7 @@ html_content = f'''<!DOCTYPE html>
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
       margin-top: 2px;
     }}
 
@@ -762,7 +631,7 @@ html_content = f'''<!DOCTYPE html>
       background: linear-gradient(135deg, #e11d48 0%, #be123c 60%, #9f1239 100%);
       color: #ffffff;
       border: none;
-      padding: 8px 25px;
+      padding: 8px 26px;
       font-size: 0.9rem;
       font-weight: 500;
       font-family: 'Be Vietnam Pro', sans-serif;
@@ -792,7 +661,7 @@ html_content = f'''<!DOCTYPE html>
 
     .btn-garden:hover {{
       transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 10px 22px -3px rgba(225, 29, 72, 0.52);
+      box-shadow: 0 10px 24px -3px rgba(225, 29, 72, 0.52);
       background: linear-gradient(135deg, #f43f5e 0%, #be123c 60%, #881337 100%);
     }}
 
@@ -831,12 +700,6 @@ html_content = f'''<!DOCTYPE html>
       to {{ opacity: 1; transform: translateY(0); }}
     }}
 
-    @keyframes growFlower {{
-      0% {{ transform: scale(0) translateY(120px) rotate(10deg); opacity: 0; }}
-      70% {{ transform: scale(1.06) translateY(-8px) rotate(-3deg); opacity: 1; }}
-      100% {{ transform: scale(1) translateY(0) rotate(0deg); opacity: 1; }}
-    }}
-
     /* Responsive adjustments for Mobile */
     @media (max-width: 640px) {{
       .top-bar {{
@@ -850,11 +713,11 @@ html_content = f'''<!DOCTYPE html>
         padding: 6px 12px;
       }}
       #screen2 {{
-        padding: 14px 12px;
+        padding: 55px 12px 16px;
       }}
       .love-card {{
-        padding: 15px 12px 12px;
-        border-radius: 20px;
+        padding: 16px 14px 14px;
+        border-radius: 22px;
       }}
       .card-border-inner {{
         top: 6px;
@@ -871,15 +734,41 @@ html_content = f'''<!DOCTYPE html>
       }}
       .card-wish {{
         font-size: 0.78rem;
-        line-height: 1.42;
+        line-height: 1.44;
         margin-bottom: 5px;
       }}
       .tulip-watercolor-img {{
         width: 180px;
       }}
-      .tulip-garden-container {{
-        height: 46vh;
-        min-height: 320px;
+    }}
+
+    @media (max-height: 700px) {{
+      #screen2 {{
+        padding: 50px 12px 10px;
+      }}
+      .love-card {{
+        padding: 12px 16px 10px;
+      }}
+      .card-header-icon {{
+        width: 34px;
+        height: 34px;
+        margin-bottom: 3px;
+      }}
+      .card-title {{
+        font-size: 1.18rem;
+        margin-bottom: 4px;
+      }}
+      .card-poem {{
+        margin-bottom: 4px;
+      }}
+      .card-wish {{
+        font-size: 0.76rem;
+        margin-bottom: 4px;
+        line-height: 1.38;
+      }}
+      .card-closing {{
+        margin-bottom: 8px;
+        font-size: 1.05rem;
       }}
     }}
   </style>
@@ -894,7 +783,7 @@ html_content = f'''<!DOCTYPE html>
 
   <!-- Soft Atmospheric Light Leaks -->
   <div class="light-leak leak-1"></div>
-  <div class="light-leak leak-2"></div>
+  <div class="leak-2 light-leak"></div>
   <div class="light-leak leak-3"></div>
 
   <!-- Ambient Particle Canvas (Sparkles & Falling Petals) -->
@@ -959,7 +848,7 @@ html_content = f'''<!DOCTYPE html>
 
   <!-- ==================== MÀN HÌNH 2: TẤM THIỆP YÊU THƯƠNG ==================== -->
   <main class="app-screen" id="screen2">
-    <!-- TẤM THIỆP ĐƯỢC CĂN GIỮA MÀN HÌNH TỰ NHIÊN, NẰM ĐÈ LÊN TRÊN VƯỜN HOA (z-index: 20) -->
+    <!-- TẤM THIỆP CĂN GIỮA CHÍNH TÂM MÀN HÌNH, NỀN TRONG TRẺO, KHÔNG BỊ VƯỜN HOA CHE KHUẤT -->
     <div class="card-container">
       <article class="love-card">
         <div class="card-border-inner"></div>
@@ -999,7 +888,7 @@ html_content = f'''<!DOCTYPE html>
           </p>
 
           <div class="card-actions">
-            <!-- Nút tương tác: Ngắm thêm hoa -->
+            <!-- Nút tương tác: Ngắm thêm hoa (bung tỏa mưa cánh hoa & pháo hoa rực rỡ) -->
             <button class="btn-garden" id="btnBloomGarden">
               <span>Ngắm thêm hoa</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -1019,21 +908,7 @@ html_content = f'''<!DOCTYPE html>
     </div>
   </main>
 
-  <!-- =====================================================================
-       CÁNH ĐỒNG HOA TULIP NỀN: NẰM HOÀN TOÀN Ở LỚP NỀN PHÍA SAU (z-index: 2)
-       Chiếm 45% - 50% màn hình, đan xen khít nhau lấp ló 2 bên và dưới chân thiệp
-       ===================================================================== -->
-  <div class="tulip-garden-container" id="tulipGarden">
-    <div class="garden-ground-mist"></div>
-    <div class="tulip-layer deep-back" id="tulipLayerDeep"></div>
-    <div class="tulip-layer back" id="tulipLayerBack"></div>
-    <div class="tulip-layer mid" id="tulipLayerMid"></div>
-    <div class="tulip-layer front" id="tulipLayerFront"></div>
-  </div>
-
   <script>
-    const tulipImgSrc = "{tulip_b64}";
-
     /* =====================================================================
        1. QUẢN LÝ PHÁT NHẠC "MỘT NHÀNH HOA" & DỰ PHÒNG SYNTHESIZER
        ===================================================================== */
@@ -1099,7 +974,6 @@ html_content = f'''<!DOCTYPE html>
     bgMusic.addEventListener('play', () => updateAudioButtonState(true));
     bgMusic.addEventListener('pause', () => updateAudioButtonState(false));
     bgMusic.addEventListener('error', () => {{
-      // Khi file mp3 chưa tồn tại ở local, tự động chuyển sang synth fallback
       useSynthFallback = true;
       if (isMusicPlaying) {{
         startSynthMusic();
@@ -1202,7 +1076,7 @@ html_content = f'''<!DOCTYPE html>
       }});
     }}
 
-    // Hiệu ứng âm thanh bung nở hoa
+    // Hiệu ứng âm thanh bung nở hoa ngọt ngào
     function playGardenBloomSound() {{
       const notes = [392.00, 523.25, 659.25, 783.99, 1046.50, 1174.66, 1318.51, 1567.98, 2093.00];
       notes.forEach((freq, idx) => {{
@@ -1213,7 +1087,7 @@ html_content = f'''<!DOCTYPE html>
     }}
 
     /* =====================================================================
-       2. CANVAS HIỆU ỨNG NỀN: HẠT BỤI VÀNG & CÁNH HOA TULIP RƠI
+       2. CANVAS HIỆU ỨNG NỀN: CÁNH HOA TỰ NHIÊN RƠI CHẦM CHẬM & BỤI NẮNG
        ===================================================================== */
     const canvas = document.getElementById('ambientCanvas');
     const ctx = canvas.getContext('2d');
@@ -1230,32 +1104,34 @@ html_content = f'''<!DOCTYPE html>
     resizeCanvas();
 
     const particles = [];
-    const MAX_PARTICLES = 36;
+    const BASE_PARTICLES = 40;
 
     class Particle {{
-      constructor(isPetal = false) {{
-        this.reset(isPetal);
+      constructor(isPetal = false, fromBurst = false) {{
+        this.reset(isPetal, fromBurst);
       }}
 
-      reset(isPetal) {{
+      reset(isPetal, fromBurst = false) {{
         this.x = Math.random() * width;
-        this.y = Math.random() * -height * 0.5;
-        this.isPetal = isPetal !== undefined ? isPetal : Math.random() > 0.45;
+        this.y = fromBurst ? Math.random() * (height * 0.4) : (Math.random() * -height * 0.5);
+        this.isPetal = isPetal !== undefined ? isPetal : Math.random() > 0.4;
         
         if (this.isPetal) {{
-          this.size = 9 + Math.random() * 10;
-          this.speedY = 0.9 + Math.random() * 1.5;
-          this.speedX = (Math.random() - 0.5) * 1.2;
+          this.size = 8 + Math.random() * 11;
+          this.speedY = 0.7 + Math.random() * 1.1; // Cánh hoa rơi chầm chậm tự nhiên
+          this.speedX = (Math.random() - 0.5) * 0.9;
           this.rot = Math.random() * Math.PI * 2;
-          this.rotSpeed = (Math.random() - 0.5) * 0.03;
+          this.rotSpeed = (Math.random() - 0.5) * 0.025;
           this.flip = Math.random() * Math.PI;
-          this.flipSpeed = 0.02 + Math.random() * 0.03;
-          this.color = Math.random() > 0.5 ? '#f472b6' : '#fda4af';
-          this.opacity = 0.5 + Math.random() * 0.4;
+          this.flipSpeed = 0.015 + Math.random() * 0.025;
+          // Gam màu cánh hoa hồng pastel phớt đào ngọt ngào
+          const palette = ['#f472b6', '#fda4af', '#fb7185', '#fecdd3', '#fbcfe8'];
+          this.color = palette[Math.floor(Math.random() * palette.length)];
+          this.opacity = 0.55 + Math.random() * 0.35;
         }} else {{
-          this.size = 1.4 + Math.random() * 2.8;
-          this.speedY = 0.3 + Math.random() * 0.7;
-          this.speedX = (Math.random() - 0.5) * 0.5;
+          this.size = 1.2 + Math.random() * 2.5;
+          this.speedY = 0.25 + Math.random() * 0.6;
+          this.speedX = (Math.random() - 0.5) * 0.4;
           this.opacity = 0.3 + Math.random() * 0.6;
           this.pulse = Math.random() * Math.PI * 2;
         }}
@@ -1263,7 +1139,7 @@ html_content = f'''<!DOCTYPE html>
 
       update() {{
         this.y += this.speedY;
-        this.x += this.speedX + Math.sin(this.y * 0.01) * 0.5;
+        this.x += this.speedX + Math.sin(this.y * 0.008) * 0.6;
 
         if (this.isPetal) {{
           this.rot += this.rotSpeed;
@@ -1273,7 +1149,7 @@ html_content = f'''<!DOCTYPE html>
         }}
 
         if (this.y > height + 40 || this.x < -40 || this.x > width + 40) {{
-          this.reset(this.isPetal);
+          this.reset(this.isPetal, false);
           this.y = -20;
         }}
       }}
@@ -1290,8 +1166,8 @@ html_content = f'''<!DOCTYPE html>
           ctx.bezierCurveTo(-this.size * 1.2, this.size * 0.8, -this.size, -this.size * 0.8, 0, 0);
           ctx.fillStyle = this.color;
           ctx.globalAlpha = this.opacity;
-          ctx.shadowColor = 'rgba(244, 114, 182, 0.4)';
-          ctx.shadowBlur = 6;
+          ctx.shadowColor = 'rgba(244, 114, 182, 0.35)';
+          ctx.shadowBlur = 5;
           ctx.fill();
         }} else {{
           ctx.beginPath();
@@ -1306,7 +1182,7 @@ html_content = f'''<!DOCTYPE html>
       }}
     }}
 
-    for (let i = 0; i < MAX_PARTICLES; i++) {{
+    for (let i = 0; i < BASE_PARTICLES; i++) {{
       const p = new Particle();
       p.y = Math.random() * height;
       particles.push(p);
@@ -1322,123 +1198,21 @@ html_content = f'''<!DOCTYPE html>
     }}
     animateParticles();
 
-    /* =====================================================================
-       3. KHỞI TẠO CÁNH ĐỒNG HOA TULIP DÀY ĐẶC CHIẾM NỬA MÀN HÌNH (4 TẦNG LỚP)
-       ===================================================================== */
-    const tulipColorFilters = [
-      'none', // Hồng phấn tự nhiên
-      'hue-rotate(-18deg) saturate(1.4) brightness(0.95)', // Đỏ thắm
-      'hue-rotate(-42deg) saturate(1.3) brightness(1.05)', // Cam đào ấm áp
-      'hue-rotate(-75deg) saturate(1.2) brightness(1.15)', // Vàng kem hoàng gia
-      'hue-rotate(42deg) saturate(1.1) brightness(1.02)'    // Tím pastel lavender
-    ];
-
-    function buildWatercolorTulipGarden() {{
-      const deepLayer = document.getElementById('tulipLayerDeep');
-      const backLayer = document.getElementById('tulipLayerBack');
-      const midLayer = document.getElementById('tulipLayerMid');
-      const frontLayer = document.getElementById('tulipLayerFront');
-      if (!deepLayer || !backLayer || !midLayer || !frontLayer) return;
-
-      deepLayer.innerHTML = '';
-      backLayer.innerHTML = '';
-      midLayer.innerHTML = '';
-      frontLayer.innerHTML = '';
-
-      const screenW = window.innerWidth;
-      const gardenH = document.getElementById('tulipGarden').clientHeight || 420;
-
-      const countDeep = Math.max(16, Math.floor(screenW / 65));
-      const countBack = Math.max(18, Math.floor(screenW / 55));
-      const countMid = Math.max(20, Math.floor(screenW / 48));
-      const countFront = Math.max(14, Math.floor(screenW / 70));
-
-      const swayClasses = ['sway-left', 'sway-right', 'sway-soft'];
-
-      function createTulipElement(heightPx, swayClass, delaySec, isFlipped, rotDeg, leftPercent, colorFilter) {{
-        const stem = document.createElement('div');
-        stem.className = `tulip-stem ${{swayClass}}`;
-        stem.style.height = `${{heightPx}}px`;
-        stem.style.animationDelay = `${{delaySec}}s`;
-        stem.style.left = `${{leftPercent}}%`;
-
-        const flipFactor = isFlipped ? -1 : 1;
-        stem.style.transform = `scaleX(${{flipFactor}}) rotate(${{rotDeg}}deg)`;
-
-        const img = document.createElement('img');
-        img.className = 'tulip-flora-img';
-        img.src = tulipImgSrc;
-        img.alt = 'Tulip Flora';
-        if (colorFilter && colorFilter !== 'none') {{
-          img.style.filter = colorFilter;
-        }}
-
-        stem.appendChild(img);
-        return stem;
+    // Thêm mưa cánh hoa khi bấm "Ngắm thêm hoa"
+    function burstFallingPetals() {{
+      for (let i = 0; i < 24; i++) {{
+        const p = new Particle(true, true);
+        p.speedY = 1.0 + Math.random() * 1.4;
+        particles.push(p);
       }}
-
-      // 1. Tầng sâu nhất (Deep Back)
-      for (let i = 0; i < countDeep; i++) {{
-        const baseH = gardenH * 0.94;
-        const height = baseH + (Math.random() - 0.5) * 40;
-        const sway = swayClasses[i % swayClasses.length];
-        const delay = (Math.random() * -5).toFixed(1);
-        const isFlipped = i % 2 === 1;
-        const rot = (Math.random() - 0.5) * 8;
-        const left = (i / countDeep * 100) + (Math.random() - 0.5) * 4;
-        const color = tulipColorFilters[i % tulipColorFilters.length];
-
-        deepLayer.appendChild(createTulipElement(height, sway, delay, isFlipped, rot, left, color));
-      }}
-
-      // 2. Tầng sau (Back)
-      for (let i = 0; i < countBack; i++) {{
-        const baseH = gardenH * 0.88;
-        const height = baseH + (Math.random() - 0.5) * 35;
-        const sway = swayClasses[(i + 1) % swayClasses.length];
-        const delay = (Math.random() * -6).toFixed(1);
-        const isFlipped = i % 2 === 0;
-        const rot = (Math.random() - 0.5) * 7;
-        const left = ((i + 0.5) / countBack * 100) + (Math.random() - 0.5) * 5;
-        const color = tulipColorFilters[(i * 2 + 1) % tulipColorFilters.length];
-
-        backLayer.appendChild(createTulipElement(height, sway, delay, isFlipped, rot, left, color));
-      }}
-
-      // 3. Tầng giữa (Mid)
-      for (let i = 0; i < countMid; i++) {{
-        const baseH = gardenH * 0.78;
-        const height = baseH + (Math.random() - 0.5) * 30;
-        const sway = swayClasses[(i + 2) % swayClasses.length];
-        const delay = (Math.random() * -5.5).toFixed(1);
-        const isFlipped = (i * 3) % 2 === 1;
-        const rot = (Math.random() - 0.5) * 6;
-        const left = (i / countMid * 100) + (Math.random() - 0.5) * 4;
-        const color = tulipColorFilters[(i * 3 + 2) % tulipColorFilters.length];
-
-        midLayer.appendChild(createTulipElement(height, sway, delay, isFlipped, rot, left, color));
-      }}
-
-      // 4. Tầng trước (Front)
-      for (let i = 0; i < countFront; i++) {{
-        const baseH = gardenH * 0.65;
-        const height = baseH + (Math.random() - 0.5) * 25;
-        const sway = swayClasses[i % swayClasses.length];
-        const delay = (Math.random() * -4).toFixed(1);
-        const isFlipped = i % 2 === 0;
-        const rot = (Math.random() - 0.5) * 5;
-        const left = ((i + 0.3) / countFront * 100) + (Math.random() - 0.5) * 4;
-        const color = tulipColorFilters[(i * 4) % tulipColorFilters.length];
-
-        frontLayer.appendChild(createTulipElement(height, sway, delay, isFlipped, rot, left, color));
+      // Giới hạn số lượng hạt để giữ 60fps mượt mà
+      if (particles.length > 90) {{
+        particles.splice(0, particles.length - 70);
       }}
     }}
 
-    buildWatercolorTulipGarden();
-    window.addEventListener('resize', buildWatercolorTulipGarden);
-
     /* =====================================================================
-       4. CHUYỂN MÀN HÌNH & HIỆU ỨNG TƯƠNG TÁC
+       3. CHUYỂN MÀN HÌNH & HIỆU ỨNG TƯƠNG TÁC
        ===================================================================== */
     const screen1 = document.getElementById('screen1');
     const screen2 = document.getElementById('screen2');
@@ -1446,24 +1220,22 @@ html_content = f'''<!DOCTYPE html>
     const tapHintBtn = document.getElementById('tapHintBtn');
     const btnBloomGarden = document.getElementById('btnBloomGarden');
     const btnBackToFlower = document.getElementById('btnBackToFlower');
-    const tulipGarden = document.getElementById('tulipGarden');
 
     function transitionToScreen2() {{
       // Tự động kích hoạt phát nhạc "Một Nhành Hoa" khi chạm hoa mở thiệp
       playMusic();
-
       playChimeEffect();
 
       if (typeof confetti === 'function') {{
         const defaults = {{
-          origin: {{ y: 0.6 }},
+          origin: {{ y: 0.55 }},
           colors: ['#f472b6', '#fda4af', '#fef08a', '#fb7185', '#c084fc', '#ffffff']
         }};
 
         confetti({{
           ...defaults,
           particleCount: 50,
-          spread: 75,
+          spread: 80,
           shapes: ['circle']
         }});
 
@@ -1472,15 +1244,15 @@ html_content = f'''<!DOCTYPE html>
             ...defaults,
             particleCount: 40,
             angle: 60,
-            spread: 55,
-            origin: {{ x: 0.15, y: 0.65 }}
+            spread: 60,
+            origin: {{ x: 0.15, y: 0.6 }}
           }});
           confetti({{
             ...defaults,
             particleCount: 40,
             angle: 120,
-            spread: 55,
-            origin: {{ x: 0.85, y: 0.65 }}
+            spread: 60,
+            origin: {{ x: 0.85, y: 0.6 }}
           }});
         }}, 220);
       }}
@@ -1488,17 +1260,14 @@ html_content = f'''<!DOCTYPE html>
       screen1.classList.add('hide');
       setTimeout(() => {{
         screen2.classList.add('show');
-        tulipGarden.classList.add('visible');
-      }}, 500);
+      }}, 450);
     }}
 
     function transitionToScreen1() {{
       screen2.classList.remove('show');
-      tulipGarden.classList.remove('visible');
-      tulipGarden.classList.remove('boosted');
       setTimeout(() => {{
         screen1.classList.remove('hide');
-      }}, 400);
+      }}, 350);
     }}
 
     roseFlower.addEventListener('click', transitionToScreen2);
@@ -1514,51 +1283,29 @@ html_content = f'''<!DOCTYPE html>
     }});
 
     /* =====================================================================
-       5. SỰ KIỆN NÚT "NGẮM THÊM HOA": CÁNH ĐỒNG BÙNG NỞ RỰC RỠ & PHÁO HOA
+       4. SỰ KIỆN NÚT "NGẮM THÊM HOA": MƯA CÁNH HOA BAY LƯỢN & PHÁO HOA
        ===================================================================== */
     btnBloomGarden.addEventListener('click', () => {{
       playGardenBloomSound();
-      tulipGarden.classList.add('boosted');
-
-      const frontLayer = document.getElementById('tulipLayerFront');
-      if (frontLayer) {{
-        const gardenH = document.getElementById('tulipGarden').clientHeight || 420;
-        for (let i = 0; i < 6; i++) {{
-          const freshStem = document.createElement('div');
-          freshStem.className = 'tulip-stem sway-soft';
-          freshStem.style.height = `${{gardenH * 0.72 + (Math.random() - 0.5) * 30}}px`;
-          freshStem.style.left = `${{(i / 5) * 88 + 6}}%`;
-          freshStem.style.transform = `scaleX(${{i % 2 === 0 ? 1 : -1}}) rotate(${{(Math.random() - 0.5) * 8}}deg)`;
-          freshStem.style.animation = 'growFlower 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards';
-
-          const img = document.createElement('img');
-          img.className = 'tulip-flora-img';
-          img.src = tulipImgSrc;
-          img.alt = 'Fresh Blooming Tulip';
-          img.style.filter = tulipColorFilters[i % tulipColorFilters.length];
-
-          freshStem.appendChild(img);
-          frontLayer.appendChild(freshStem);
-        }}
-      }}
+      burstFallingPetals();
 
       if (typeof confetti === 'function') {{
-        const duration = 4.0 * 1000;
+        const duration = 3.5 * 1000;
         const end = Date.now() + duration;
 
         (function frame() {{
           confetti({{
-            particleCount: 7,
+            particleCount: 6,
             angle: 60,
-            spread: 65,
-            origin: {{ x: 0.05, y: 0.85 }},
+            spread: 70,
+            origin: {{ x: 0.05, y: 0.8 }},
             colors: ['#f472b6', '#fda4af', '#fde047', '#fb923c', '#c084fc', '#ffffff']
           }});
           confetti({{
-            particleCount: 7,
+            particleCount: 6,
             angle: 120,
-            spread: 65,
-            origin: {{ x: 0.95, y: 0.85 }},
+            spread: 70,
+            origin: {{ x: 0.95, y: 0.8 }},
             colors: ['#f472b6', '#fda4af', '#fde047', '#fb923c', '#c084fc', '#ffffff']
           }});
 
@@ -1569,21 +1316,21 @@ html_content = f'''<!DOCTYPE html>
 
         setTimeout(() => {{
           confetti({{
-            particleCount: 90,
+            particleCount: 80,
             spread: 110,
             origin: {{ y: 0.45 }},
             colors: ['#f472b6', '#fda4af', '#fde047', '#c084fc', '#ffffff']
           }});
-        }}, 500);
+        }}, 400);
 
         setTimeout(() => {{
           confetti({{
-            particleCount: 65,
+            particleCount: 60,
             spread: 90,
-            origin: {{ y: 0.32 }},
+            origin: {{ y: 0.35 }},
             colors: ['#fbbf24', '#f472b6', '#38bdf8', '#a855f7']
           }});
-        }}, 1200);
+        }}, 1000);
       }}
     }});
   </script>
@@ -1594,4 +1341,4 @@ html_content = f'''<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print("Updated index.html successfully with Mot Nhanh Hoa audio integration and auto-fallback!")
+print("Updated index.html successfully with minimalist elegant Screen 2, centered love card, and removed tulip garden!")
